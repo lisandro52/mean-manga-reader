@@ -5,7 +5,10 @@ angular.module('mangaReaderApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
-    }];
+    }, {
+		'title': 'Manga Reader',
+		'link': '/manga'
+	}];
 
     $scope.isCollapsed = true;
 

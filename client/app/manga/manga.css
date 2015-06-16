@@ -1,0 +1,20 @@
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:center;
+    /* inline-block space fix */
+    margin-right:-4px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.reader-container {
+	background-color: #000;
+}
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    cursor: pointer;
+}
