@@ -18,3 +18,53 @@
 [x-ng-click] {
     cursor: pointer;
 }
+
+html, body, #wrapper, #buttons {
+  width: 100%;
+  height: 100%;
+}
+
+
+.manga-list div {
+    /*background-color: gray;*/
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+	font-weight: bold;
+}
+.manga-list .head, .manga-list .content, .manga-list .footer {
+    width: 240px;
+    padding: 5px;
+    border: 2px solid;
+}
+.manga-list .head {
+    cursor: pointer;
+    background-color: #a5fb88;
+    border-bottom: none;
+}
+.manga-list .content {
+    border-top: none;
+    border-bottom: none;
+}
+.manga-list .footer {
+    background-color: #428bca;
+    border-top: none;
+	margin-top: 0px;
+}
+
+.manga-list .list-group-text {
+	font-size: 15px;
+	font-weight: normal;
+}
+
+a {
+	color: #FFF;
+}
+
+.asm-left-open {
+	background-color: #EEE;
+}
+
+a.list-group-item {
+	margin-bottom: 1px;
+}

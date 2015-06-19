@@ -6,7 +6,8 @@ angular.module('mangaReaderApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'ng-slide-down'
+  'ng-slide-down',
+  'slideMenu'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider
