@@ -31,6 +31,37 @@ angular.module('mangaReaderApp')
 		return mangaAPI.get(manga, chapter, mangaAPI.page);
 	};
 	
+	mangaAPI.goToPage = function(manga, chapter, page) {
+		return mangaAPI.get(manga, chapter, page);
+	};
+	
+	mangaAPI.getMangaList = function() {
+		return [{
+			title: 'Love hina',
+			alias: 'love-hina',
+			chapters: [{
+				chapterNumber: 2,
+				pages: 12
+			},
+			{
+				chapterNumber: 4,
+				pages: 20
+			}]
+		},
+		{
+			title: 'Round Shell',
+			alias: 'round-shell',
+			chapters: [{
+				chapterNumber: 1,
+				pages: 34
+			},
+			{
+				chapterNumber: 2,
+				pages: 20
+			}]
+		}];
+	};
+	
 	return mangaAPI;
 	
 });

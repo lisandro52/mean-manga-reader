@@ -1,43 +1,56 @@
 'use strict';
 
 angular.module('mangaReaderApp')
-	.controller('MangaCtrl', function (MangaAPI, $scope) {
+	.controller('MangaCtrl', function (MangaAPI, $scope, $stateParams) {
 
 	var vm = $scope;
-	
-	vm.scrollTo = function(element) {
+	vm.mangaId = $stateParams.manga;
+	vm.chapter = $stateParams.chapter;
+	vm.page = $stateParams.page;
+
+	vm.scrollTo = function (element) {
 		$('html, body').animate({
 			scrollTop: $(element).offset().top
 		}, 1000);
 	};
-	
+
 	vm.renderPage = function (res) {
 		vm.img = res.imgUrl;
-		vm.scrollTo(".scroll-top");
 	};
 
 	vm.prev = function () {
-		MangaAPI.prevPage('love-hina', 4)
-			.success(function(res) {
-				vm.renderPage(res);
+		vm.scrollTo(".scroll-top");
+		MangaAPI.prevPage(vm.mangaId, vm.chapter)
+			.success(function (res) {
+			vm.renderPage(res);
 		});
 	};
 
 	vm.next = function () {
-		MangaAPI.nextPage('love-hina', 4)
-			.success(function(res) {
-				vm.renderPage(res);
+		vm.scrollTo(".scroll-top");
+		MangaAPI.nextPage(vm.mangaId, vm.chapter)
+			.success(function (res) {
+			vm.renderPage(res);
 		});
 	};
 
 	vm.init = function () {
-		MangaAPI.initialPage('love-hina', 4)
+		vm.scrollTo(".scroll-top");
+		MangaAPI.initialPage(vm.mangaId, vm.chapter)
 			.success(function (res) {
-				vm.renderPage(res);
+			vm.renderPage(res);
 		});
-	};	
-	
-	vm.init();
-	
+	};
+
+	vm.goToPage = function (mangaId, chapter, page) {
+		vm.scrollTo(".scroll-top");
+		MangaAPI.goToPage(mangaId, chapter, page)
+			.success(function (res) {
+			vm.renderPage(res);
+		});
+	}
+
+	vm.goToPage(vm.mangaId, vm.chapter, vm.page);
+
 });
 
