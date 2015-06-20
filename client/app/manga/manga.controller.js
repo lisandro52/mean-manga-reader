@@ -9,7 +9,11 @@ angular.module('mangaReaderApp')
 	vm.page = $stateParams.page;
 	vm.mangaList = MangaAPI.getMangaList();
 	vm.showMangaList = false;
-
+	
+	vm.toggleMenu = function() {
+		vm.showMangaList = !vm.showMangaList;
+	}
+	
 	vm.scrollTo = function (element) {
 		$('html, body').animate({
 			scrollTop: $(element).offset().top

@@ -9,9 +9,6 @@
 	margin-bottom: 10px;
 }
 
-.reader-container {
-	background-color: #000;
-}
 
 [ng-click],
 [data-ng-click],
@@ -19,9 +16,24 @@
     cursor: pointer;
 }
 
-html, body, #wrapper, #buttons {
-  width: 100%;
-  height: 100%;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+/*margin: 0;
+padding: 0;
+border: 0;
+vertical-align: baseline;*/
+
 }
 
 
@@ -61,10 +73,28 @@ a {
 	color: #FFF;
 }
 
-.asm-left-open {
-	background-color: #EEE;
-}
 
 a.list-group-item {
 	margin-bottom: 1px;
+}
+
+body{width:100%}
+
+#menuleft{left:-15%;position:fixed;top:0;width:15%;height:100%;z-index:1000;border-right:1px solid #000;background-color:#e9e9e9;display:block}
+#menuleft.slide{left:0}
+#menuleft h1{background-color:#424242;color:#eee;font-size:1.2em;line-height:50px;text-align:center;float:none !important}
+#menuleft a{display:block;width:98%;padding:10px 0 10px 2%;}
+#all{display:block;width:100%;background-color:#000}
+#all.hideo{position:fixed;left:0%;top:0;width:100%; background-color:#000}
+#all.slide{position:relative; background-color:#000}
+.slide,.hideo{transition: all 0.3s ease;}
+
+.overlay{left:0;top:50px;transition: all 0.3s ease;}
+.overlay.show{position:fixed;left:15%;right:0;bottom:0;background-color:rgba(0, 0, 0, 0.8);z-index:9999}
+
+#wrapper{float:left;clear:both;width:100%; background-color:#000}
+
+
+.reader-container {
+	background-color: #000;
 }
