@@ -2,7 +2,7 @@
 	<a href="#" ng-click="toggleMenu()" class="list-group-item list-group-item-danger active">Close</a>
 	<div ng-repeat="manga in mangaList">
 		<a href="#" ng-click="showChapters = !showChapters" class="list-group-item active">{{manga.title}}</a>
-		<div ng-slide-down="showChapters" duration="1">
+		<div ng-slide-down="showChapters" duration="0.3">
 			<div ng-repeat="chapter in manga.chapters">
 				<a href="/manga/{{manga.alias}}/{{chapter.chapterNumber}}/0" class="list-group-item list-group-text">Chapter:{{chapter.chapterNumber}}. Pages:{{chapter.pages}}.</a>
 			</div>
