@@ -5,7 +5,7 @@
 	</div>
 	<div id="all" ng-class="{hideo:showMangaList,slide:!showMangaList}">
 		<div ng-include="'components/manga-reader/navigation-buttons.html'"></div>
-		<div class="overlay" ng-class="{show:showMangaList}"></div>
+		<div class="overlay" ng-class="{show:showMangaList}" ng-click="toggleMenu()"></div>
 		<div id="wrapper">
 			<div class="col-md-12 col-centered">
 				<img src={{img}} ng-click="next()" />
