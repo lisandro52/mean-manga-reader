@@ -5,7 +5,7 @@ angular.module('mangaReaderApp')
     $stateProvider
 		.state('manga', {
         url: '/manga',
-        templateUrl: 'app/manga/manga.html',
+        templateUrl: 'app/manga/manga-list.html',
         controller: 'MangaCtrl'
 	})
 		.state('mangaParam', {

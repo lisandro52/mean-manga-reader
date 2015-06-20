@@ -6,9 +6,7 @@
 		<button type="button" class="btn btn-primary btn-sm" ng-click="init();window.scroll(0,0);">Inicio
 			<span class="glyphicon glyphicon-repeat" /></span>
 		</button>
-		<button type="button" class="btn btn-primary btn-sm" ng-click="toggleMenu()">Mangas
-			<span class="glyphicon glyphicon-th-list" /></span>
-		</button>
+		<div ng-include="'components/manga-reader/menu-toggle-button.html'" include-replace></div>
 		<button type="button" class="btn btn-primary btn-sm" ng-click="next();window.scroll(0,0);">
 			<span class="glyphicon glyphicon-chevron-right" /></span>
 		</button>

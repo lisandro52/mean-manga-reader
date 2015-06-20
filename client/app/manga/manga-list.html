@@ -1,16 +1,17 @@
 <div class="scroll-top"></div>
 <div class="reader-container">
 	<div id="menuleft" ng-class="{hideo:!showMangaList,slide:showMangaList}">
-		<div ng-include="'components/manga-reader/manga-list.html'"></div>
+		<div ng-include="'components/manga-reader/manga-list.html'" include-replace></div>
 	</div>
 	<div id="all" ng-class="{hideo:showMangaList,slide:!showMangaList}">
-		<div ng-include="'components/manga-reader/navigation-buttons.html'" include-replace></div>
+		<div class="col-md-12 col-centered">
+			<div ng-include="'components/manga-reader/menu-toggle-button.html'"></div>
+		</div>
 		<div class="overlay" ng-class="{show:showMangaList}" ng-click="toggleMenu()"></div>
 		<div id="wrapper">
 			<div class="col-md-12 col-centered">
-				<img src={{img}} ng-click="next()" />
+				<h3>Haz click en el boton de "Mangas" para ver la lista de mangas disponibles.</h3>
 			</div>
-			<div ng-include="'components/manga-reader/navigation-buttons.html'" include-replace></div>
 		</div>
 	</div>
 </div>

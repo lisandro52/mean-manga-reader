@@ -36,7 +36,13 @@ vertical-align: baseline;*/
 
 }
 
+h3 {
+	color: #FFF;
+}
 
+html {
+	background-color: #333
+}
 .manga-list div {
     /*background-color: gray;*/
     margin-left: auto;
@@ -69,9 +75,6 @@ vertical-align: baseline;*/
 	font-weight: normal;
 }
 
-a {
-	color: #FFF;
-}
 
 
 a.list-group-item {
@@ -84,17 +87,17 @@ body{width:100%}
 #menuleft.slide{left:0}
 #menuleft h1{background-color:#424242;color:#eee;font-size:1.2em;line-height:50px;text-align:center;float:none !important}
 #menuleft a{display:block;width:98%;padding:10px 0 10px 2%;}
-#all{display:block;width:100%;background-color:#000}
-#all.hideo{position:fixed;left:0%;top:0;width:100%; background-color:#000}
-#all.slide{position:relative; background-color:#000}
+#all{display:block;width:100%;background-color:#333}
+#all.hideo{position:fixed;left:0%;top:0;width:100%; }
+#all.slide{position:relative; background-color:#333}
 .slide,.hideo{transition: all 0.3s ease;}
 
 .overlay{left:0;top:50px;transition: all 0.3s ease;}
 .overlay.show{position:fixed;left:15%;right:0;bottom:0;background-color:rgba(0, 0, 0, 0.8);z-index:9999}
 
-#wrapper{float:left;clear:both;width:100%; background-color:#000}
+#wrapper{float:left;clear:both;width:100%; background-color:#333}
 
 
 .reader-container {
-	background-color: #000;
+	background-color:#333
 }
