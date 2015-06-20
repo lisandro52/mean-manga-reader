@@ -7,7 +7,7 @@ angular.module('mangaReaderApp')
       'link': '/'
     }, {
 		'title': 'Manga Reader',
-		'link': '/manga-list'
+		'link': '/manga'
 	}];
 
     $scope.isCollapsed = true;

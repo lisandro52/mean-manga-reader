@@ -12,7 +12,7 @@ angular.module('mangaReaderApp')
 	
 	vm.toggleMenu = function() {
 		vm.showMangaList = !vm.showMangaList;
-	}
+	};
 	
 	vm.scrollTo = function (element) {
 		$('html, body').animate({
