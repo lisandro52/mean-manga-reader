@@ -4,7 +4,7 @@ angular.module('mangaReaderApp')
 	.config(function ($stateProvider) {
     $stateProvider
 		.state('manga', {
-        url: '/manga',
+        url: '/',
         templateUrl: 'app/manga/manga-list.html',
         controller: 'MangaCtrl'
 	})
