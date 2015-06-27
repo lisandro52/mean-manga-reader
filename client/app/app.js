@@ -20,6 +20,7 @@ angular.module('mangaReaderApp', [
 		require: 'ngInclude',
 		restrict: 'A',
 		link: function (scope, el, attrs) {
+			attrs = attrs;
 			el.replaceWith(el.children());
 		}
 	};

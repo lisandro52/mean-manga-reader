@@ -39,9 +39,9 @@ angular.module('mangaReaderApp')
 	mangaAPI.getMaxChapterPage = function (manga, chapter) {
 		var maxPages;
 		$.each(mangaAPI.mangaList, function (i, m) {
-			if (m.alias == manga) {
+			if (m.alias === manga) {
 				$.each(m.chapters, function (ind, c) {
-					if (c.chapterNumber == chapter) {
+					if (c.chapterNumber === chapter) {
 						maxPages = c.pages;
 						return false;
 					}
